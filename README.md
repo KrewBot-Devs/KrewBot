@@ -8,8 +8,8 @@ KrewBot currently only has administration commands, we are in the process of add
 
 ## Commands
 #### Admin Commands
-**!k kick** *@user, reason (optional)* - throw someone overboard    
-**!k ban** *@user, reason (optional)* - banish someone from your krew    
+**!k kick** *@user reason (optional)* - throw someone overboard    
+**!k ban** *@user reason (optional)* - banish someone from your krew    
 **!k clear** *Number of messages* - remove set amount of messages   
 **!k pardon** *Discord ID #* - pardon people who were wrongfully banished   
 
