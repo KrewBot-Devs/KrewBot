@@ -2,14 +2,12 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 
-bot = commands.Bot(command_prefix='!k ')
 
-bot.remove_command('help')
 
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
+        bot.remove_command('help')
 
     @commands.group(name='help')
     async def help(self, ctx):
@@ -20,7 +18,8 @@ class Help(commands.Cog):
 
             help_embed.add_field(name="Admin", value=f"``{ctx.prefix}help admin``", inline=True)
             help_embed.add_field(name='Other', value=f"``{ctx.prefix}help other``", inline=True)
-            help_embed.set_footer(text="Made by Emerald and Shwayz")
+            help_embed.add_field(name='Krew', value=f"``{ctx.prefix}help krew``", inline=True)
+            help_embed.set_footer(text="Made by Emerald and Sh-wayz")
             await ctx.send(embed=help_embed)
 
 
@@ -59,6 +58,20 @@ class Help(commands.Cog):
 
         await ctx.send(embed=help_embed)
 
+    @help.command(name='krew')
+    async def help_admin(self, ctx):
+
+        help_embed = discord.Embed(color=discord.Color.orange())
+        help_embed.set_author(
+        name='Krew Bot Commands')
+
+        help_embed.add_field(
+        name='**Krew Related Commands**',
+        value=f'**{ctx.prefix}goods** - Get all trade prices on goods for every island.\n')
+
+        help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
+
+        await ctx.send(embed=help_embed)
 
 def setup(bot):
     bot.add_cog(Help(bot))
