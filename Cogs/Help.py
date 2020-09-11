@@ -69,7 +69,7 @@ class Help(commands.Cog):
         name='**Krew Related Commands**',
         value=f'**{ctx.prefix}goods** - Get all trade prices for goods\n'
         f'**{ctx.prefix}ships** - Get all prices for ships.\n'
-        f'**{ctx.prefix}items** - Get prices for all items.', inline=True)
+        f'**{ctx.prefix}items** - Get prices for all items.\n', inline=True)
 
         help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
 
