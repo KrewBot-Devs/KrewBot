@@ -33,10 +33,10 @@ class Help(commands.Cog):
 
         help_embed.add_field(
         name='**Admin Commands**',
-        value=f'**{ctx.prefix}kick** *mention user* *reason (optional)* - throw someone overboard\n'
-        f'**{ctx.prefix}ban** *mention user* *reason* (optional)* - banish someone from your krew\n'
-        f'**{ctx.prefix}clear** *number of messages* - remove set amount of messages\n'
-        f'**{ctx.prefix}pardon** *user ID* - pardon people who were wrongfully banished\n', inline=False)
+        value=f'**{ctx.prefix}kick** *@user* *reason (optional)* - Throw someone overboard.\n'
+        f'**{ctx.prefix}ban** *@user* *reason (optional)* - Banish someone from your Krew.\n'
+        f'**{ctx.prefix}clear** *Number of messages.* - Remove set amount of messages.\n'
+        f'**{ctx.prefix}pardon** *user ID* - Pardon people who were wrongfully banished.\n', inline=False)
 
 
         help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
