@@ -3,8 +3,12 @@ from discord.ext import commands
 from discord.utils import get
 
 class Krew(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+
+
     @commands.command(name='goods')
-    async def economy(self, ctx):
+    async def goods(self, ctx):
         embed=discord.Embed(title="Goods Prices", color=discord.Color.orange())
         embed.add_field(name="Brazil", value="Rum: 60\nCoffee: 26\nSpice: 25 \nSilk: 150", inline=True)
         embed.add_field(name="Guinea", value="Rum: 38\nCoffee: 22\nSpice: 22\nSilk: 310", inline=True)
@@ -14,7 +18,7 @@ class Krew(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command(name='ships')
-    async def economy(self, ctx):
+    async def ships(self, ctx):
         embed=discord.Embed(title="Ship Prices", color=discord.Color.orange())
         embed.add_field(name="Brazil", value="Raft 1: 500\nRaft 2: 1300\nRaft 3: 2400\nTrader 1: 4350\nBoat 1: 6900\nBoat 2: 11k\nBoat 3: 16k\nDestroyer 1: 50k\nDestroyer 2: 80k\nDestroyer 3: 130k\nBaby Fancy: 8k", inline=True)
         embed.add_field(name="Guinea", value="Raft 1: 500\nRaft 2: 1300\nRaft 3: 2400\nTrader 1: 4350\nBoat 1: 6900\nBoat 2: 11k\nBoat 3: 16k\nDestroyer 1: 50k\nDestroyer 2: 80k\nDestroyer 3: 130k\nCalm Spirit: 120k", inline=True)
