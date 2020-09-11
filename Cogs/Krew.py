@@ -8,7 +8,7 @@ class Krew(commands.Cog):
 
 
     @commands.command(name='goods')
-<<<<<<< HEAD
+
     async def goods(self, ctx, island='All'):
         island = island.capitalize()
         if island == 'All':
@@ -33,19 +33,6 @@ class Krew(commands.Cog):
                 val = '\n'.join(temp)
                 embed.add_field(name=island, value=val, inline=True)
             await ctx.send(embed=embed)
-
-
-=======
-    async def goods(self, ctx):
-        embed=discord.Embed(title="Goods Prices", color=discord.Color.orange())
-        embed.add_field(name="Brazil", value="*Rum:* 60\n*Coffee:* 26\n*Spice:* 25 \n*Silk:* 150", inline=True)
-        embed.add_field(name="Guinea", value="*Rum:* 38\n*Coffee:* 22\n*Spice:* 22\n*Silk:* 310", inline=True)
-        embed.add_field(name="Labrador", value="*Rum:* 48\n*Coffee:* 40\n*Spice:* 14\n*Silk:* 230", inline=True)
-        embed.add_field(name="Spain", value="*Rum:* 52\n*Coffee:* 65 \n*Spice:* 53\n*Silk:* 180", inline=True)
-        embed.add_field(name="Jamaica", value="*Rum:* 32\n*Coffee:* 70\n*Spice:* 40\n*Silk:* 240", inline=True)
-        await ctx.send(embed=embed)
->>>>>>> 80ee5ea172fb82a0b6f75cf319dee5ae8d7ffacb
-
     @commands.command(name='ships')
     async def ships(self, ctx):
         embed=discord.Embed(title="Ship Prices", color=discord.Color.orange())
