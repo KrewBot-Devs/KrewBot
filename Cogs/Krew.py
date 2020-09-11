@@ -6,7 +6,7 @@ class Krew(commands.Cog):
     @commands.command(name='goods')
     async def economy(self, ctx):
         embed=discord.Embed(title="Goods Prices", color=discord.Color.orange())
-        embed.add_field(name="Brazil", value="Rum: 60\nCoffee: 26\nSpice: 25 \n ilk: 150", inline=True)
+        embed.add_field(name="Brazil", value="Rum: 60\nCoffee: 26\nSpice: 25 \nSilk: 150", inline=True)
         embed.add_field(name="Guinea", value="Rum: 38\nCoffee: 22\nSpice: 22\nSilk: 310", inline=True)
         embed.add_field(name="Labrador", value="Rum: 48\nCoffee: 40\nSpice: 14\nSilk: 230", inline=True)
         embed.add_field(name="Spain", value="Rum: 52\nCoffee: 65 \nSpice: 53\nSilk: 180", inline=True)
