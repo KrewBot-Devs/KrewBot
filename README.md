@@ -14,9 +14,7 @@ KrewBot currently mostly only has administration commands with a couple others a
 **!k pardon** *Discord ID #* - pardon people who were wrongfully banished.   
 #### Krew Related Commands
 **!k goods** - Get all trade prices for goods. 
-
 **!k ships** - Get all prices for ships.
-
 **!k items** - Get prices for all items.
 #### Other Commands
 **!k info** - show some information about the bot.
