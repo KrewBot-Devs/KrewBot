@@ -19,7 +19,8 @@ class Krew(commands.Cog):
             embed.add_field(name="Spain", value="Rum: 52\nCoffee: 65 \nSpice: 53\nSilk: 180", inline=True)
             embed.add_field(name="Jamaica", value="Rum: 32\nCoffee: 70\nSpice: 40\nSilk: 240", inline=True)
             await ctx.send(embed=embed)
-        elif island in 'Jamaica', "Spain", "Labrador","Guinea","Brazil":
+
+        elif island == "Brazil" or island == "Guinea" or island == "Labrador" or island == "Spain" or island == "Jamaica":
             with open( 'data/goods.json', 'r') as stuff:
                 goods = cj.load(stuff)
 
