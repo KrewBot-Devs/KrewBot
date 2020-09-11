@@ -4,7 +4,7 @@ KrewBot is a [krew.io](https://krew.io) themed Discord bot.
 
 ## Features
 
-KrewBot currently mostly only has administration commands with a couple others added in, we are in the process of adding more Krew features such as the ability to view each servers leaderboard, the most profitable trade routes, and the prices of all in-game items at each island. This bot also features some cool things such as custom join and leave messages (which we are working on fixing some bugs for), and a custom help menu!
+KrewBot currently mostly only has administration commands with a couple others added in such as the prices of all in-game items at each island. we are in the process of adding more Krew features such as the ability to view each servers leaderboard. This bot also features some cool things such as custom join and leave messages, and a custom help menu.
 
 ## Commands
 #### Admin Commands
