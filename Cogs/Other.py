@@ -16,7 +16,7 @@ class Other(commands.Cog):
         info_msg.add_field(name="Creators", value="Emerald#8617 &\n Sh-wayz#4749", inline=True)
         info_msg.add_field(name="Total Servers", value=str(len(self.bot.guilds)), inline=True)
         info_msg.add_field(name="Total Users", value=str(len(self.bot.users)), inline=True)
-        info_msg.add_field(name="Source Code", value="https://github.com/Sh-wayz/krewbot", inline=True)
+        info_msg.add_field(name="Source Code", value="https://github.com/KrewBot-Devs/KrewBot", inline=True)
         info_msg.set_author(name="Krew Bot Information",)
         await ctx.send(embed=info_msg)
 
