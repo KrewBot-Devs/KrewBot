@@ -67,7 +67,8 @@ class Help(commands.Cog):
 
         help_embed.add_field(
         name='**Krew Related Commands**',
-        value=f'**{ctx.prefix}goods** - Get all trade prices on goods for every island.\n')
+        value=f'**{ctx.prefix}goods** - Get all trade prices on goods for every island.\n'
+        f'**{ctx.prefix}ships** - Get all prices for ships.\n', inline=True)
 
         help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
 
