@@ -19,7 +19,7 @@ class Krew(commands.Cog):
             embed.add_field(name="Spain", value="Rum: 52\nCoffee: 65 \nSpice: 53\nSilk: 180", inline=True)
             embed.add_field(name="Jamaica", value="Rum: 32\nCoffee: 70\nSpice: 40\nSilk: 240", inline=True)
             await ctx.send(embed=embed)
-        elif island == "Brazil" or island == "Guinea" or island == "Labrador" or island == "Spain" or island == "Jamaica":
+        elif island in 'Jamaica', "Spain", "Labrador","Guinea","Brazil":
             with open( 'data/goods.json', 'r') as stuff:
                 goods = cj.load(stuff)
 
@@ -33,6 +33,7 @@ class Krew(commands.Cog):
                 val = '\n'.join(temp)
                 embed.add_field(name=island, value=val, inline=True)
             await ctx.send(embed=embed)
+
     @commands.command(name='ships')
     async def ships(self, ctx):
         embed=discord.Embed(title="Ship Prices", color=discord.Color.orange())
