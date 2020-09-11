@@ -4,7 +4,7 @@ KrewBot is a [krew.io](https://krew.io) themed Discord bot.
 
 ## Features
 
-KrewBot currently only has administration commands, we are in the process of adding more Krew features such as the ability to view each servers leaderboard, the most profitable trade routes, and the prices of all in-game items at each island.
+KrewBot currently mostly only has administration commands with a couple others added in, we are in the process of adding more Krew features such as the ability to view each servers leaderboard, the most profitable trade routes, and the prices of all in-game items at each island.
 
 ## Commands
 #### Admin Commands
@@ -12,6 +12,10 @@ KrewBot currently only has administration commands, we are in the process of add
 **!k ban** *@user reason (optional)* - banish someone from your krew.    
 **!k clear** *Number of messages* - remove set amount of messages.   
 **!k pardon** *Discord ID #* - pardon people who were wrongfully banished.   
+#### Krew Related Commands
+**!k goods** - show all trade prices for each island
+####Other Commands
+**!k info** - show some infor
 
 
 ## Contributing
