@@ -14,7 +14,7 @@ bot.remove_command('help')
 with open('data/keys.json', 'r') as keys_file:
     bot.key = cj.load(keys_file)
 
-initial_extensions = ['Cogs.Admin','Cogs.Events','Cogs.Help','Cogs.Other']
+initial_extensions = ['Cogs.Admin','Cogs.Events','Cogs.Help','Cogs.Other','Cogs.Krew']
 
 for extension in initial_extensions:
     bot.load_extension(extension)

@@ -2,14 +2,12 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 
-bot = commands.Bot(command_prefix='!k ')
 
-bot.remove_command('help')
 
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
+        bot.remove_command('help')
 
     @commands.group(name='help')
     async def help(self, ctx):
