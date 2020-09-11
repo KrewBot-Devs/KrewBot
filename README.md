@@ -13,8 +13,8 @@ KrewBot currently mostly only has administration commands with a couple others a
 **!k clear** *Number of messages* - remove set amount of messages.   
 **!k pardon** *Discord ID #* - pardon people who were wrongfully banished.   
 #### Krew Related Commands
-**!k goods** - show all trade prices for each island.
-####Other Commands
+**!k goods** - show all trade prices for each island.    
+#### Other Commands
 **!k info** - show some information about the bot.
 
 
