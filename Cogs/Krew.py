@@ -45,14 +45,35 @@ class Krew(commands.Cog):
 
 
     @commands.command(name='items')
-    async def items(self, ctx):
-        embed=discord.Embed(title='Item Prices', color=discord.Color.orange())
-        embed.add_field(name='Brazil', value='*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k\n*Bruiser: 20k*', inline=True)
-        embed.add_field(name='Guinea', value='*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k\n*Drifter:* 25k')
-        embed.add_field(name='Labrador', value='*Steel Cannon:* 35k\n*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade*: 3k')
-        embed.add_field(name='Spain', value='*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k')
-        embed.add_field(name='Jamaica', value='*Air Pegleg:* 22k\n*Blue Gunpowder:* 50k\n*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k\n*Demolisher:* 100k')
-        embed.set_footer(text='Do k! items <item name> for more info on an item.')
-        await ctx.send(embed=embed)
+    async def items(self, ctx, item='All'):
+        item = item.capitalize()
+        if item == "All":
+            embed=discord.Embed(title='Item Prices', color=discord.Color.orange())
+            embed.add_field(name='Brazil', value='*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k\n*Bruiser: 20k*', inline=True)
+            embed.add_field(name='Guinea', value='*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k\n*Drifter:* 25k')
+            embed.add_field(name='Labrador', value='*Steel Cannon:* 35k\n*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade*: 3k')
+            embed.add_field(name='Spain', value='*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k')
+            embed.add_field(name='Jamaica', value='*Air Pegleg:* 22k\n*Blue Gunpowder:* 50k\n*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k\n*Demolisher:* 100k')
+            embed.set_footer(text='Do k! items <item name> for more info on an item.')
+            await ctx.send(embed=embed)
+        elif item == "Distance" or item == "AttackSpeed" or item == "Damage" or item == "Speed" or item == "Bruiser" or item == "Drifter" or item == "SteelCannon" or item == "Pegleg" or item == "Gunpowder" or item == "Demolisher":
+            with open( 'data/items.json', 'r') as stuff:
+                items = cj.load(stuff)
+
+            if item in items:
+                embed=discord.Embed(title="Items", color=discord.Color.orange())
+
+                temp = []
+                for k, v in items[item].items():
+
+                    temp.append(str(k + ': ' + v))
+                val = '\n'.join(temp)
+                embed.add_field(name=item, value=val, inline=True)
+            await ctx.send(embed=embed)
+
+
+
+
+
 def setup(bot):
     bot.add_cog(Krew(bot))
