@@ -17,8 +17,8 @@ KrewBot currently mostly only has administration commands with a couple others a
 **!k ships** - Get all prices for ships.  
 **!k items** - Get prices for all items. 
 #### Other Commands
-**!k info** - show some information about the bot.
-
+**!k info** - Show some information about the bot.     
+**!k up** - Displays the bot current uptime.
 
 ## Contributing
 To contribute to KrewBot, please fork the repository and make a pull request with the desired changes.
