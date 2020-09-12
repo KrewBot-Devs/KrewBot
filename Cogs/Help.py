@@ -7,7 +7,6 @@ from discord.utils import get
 class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        bot.remove_command('help')
 
     @commands.group(name='help')
     async def help(self, ctx):
@@ -36,7 +35,6 @@ class Help(commands.Cog):
         f'**{ctx.prefix}ban** *@user* *reason (optional)* - Banish someone from your Krew.\n'
         f'**{ctx.prefix}clear** *Number of messages.* - Remove set amount of messages.\n'
         f'**{ctx.prefix}pardon** *user ID* - Pardon people who were wrongfully banished.\n', inline=False)
-
 
         help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
 
