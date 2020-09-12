@@ -8,8 +8,7 @@ import logging
 #logging.basicConfig(level=logging.DEBUG)
 
 
-bot = commands.Bot(command_prefix='!k ')
-bot.remove_command('help')
+bot = commands.Bot(command_prefix='!k ', help_command=None)
 
 with open('data/keys.json', 'r') as keys_file:
     bot.key = cj.load(keys_file)

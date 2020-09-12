@@ -57,7 +57,7 @@ class Help(commands.Cog):
         await ctx.send(embed=help_embed)
 
     @help.command(name='krew')
-    async def help_admin(self, ctx):
+    async def help_krew(self, ctx):
 
         help_embed = discord.Embed(color=discord.Color.orange())
         help_embed.set_author(
