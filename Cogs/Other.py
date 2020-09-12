@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
-import async_cse
 import arrow
 
 
