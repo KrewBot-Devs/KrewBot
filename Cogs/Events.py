@@ -10,11 +10,7 @@ class Events(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-<<<<<<< HEAD
-        activity = discord.Game(name='Krew.io with shwayz', type=3)
-=======
         activity = discord.Game(name='Krew.io | https://github.com/KrewBot-Devs/KrewBot', type=3)
->>>>>>> e1704f6a7403dedb96af357022a6bbec7795fa44
         await self.bot.change_presence(status=discord.Status.online, activity=activity)
 
 

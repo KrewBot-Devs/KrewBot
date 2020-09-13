@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='!k ', help_command=None)
 with open('data/keys.json', 'r') as keys_file:
     bot.key = cj.load(keys_file)
 
-initial_extensions = ['Cogs.Admin','Cogs.Events','Cogs.Help','Cogs.Other','Cogs.Krew']
+initial_extensions = ['Cogs.Admin','Cogs.Events','Cogs.Help','Cogs.Other','Cogs.Krew','Cogs.Config']
 
 for extension in initial_extensions:
     bot.load_extension(extension)
