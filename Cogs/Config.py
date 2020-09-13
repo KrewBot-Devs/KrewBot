@@ -14,7 +14,7 @@ class Config(commands.Cog):
             help_embed.set_author(
                 name="Config Commands")
 
-
+#100% fucked atm
     @config.command(name='disable')
     async def disable(self, ctx, *, command, pass_context=True):
         try:
@@ -24,7 +24,8 @@ class Config(commands.Cog):
         except:
             await ctx.send(embed=discord.Embed(color=discord.Color.orange(), description="That's not a valid command!"))
 
-
+#    @config.command(name='joinleave')
+#    async def joinleave(self, ctx, )
 
 
 
