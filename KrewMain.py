@@ -12,10 +12,7 @@ def get_prefixes(bot, message):
         prefixes = cj.load(f)
     return prefixes[str(message.guild.id)]
 
-def get_jlc(bot, message):
-    with open('data/joinleave.json', 'r') as f:
-        jlc = cj.load(f)
-    return jlc[str(message.guild.id)]
+
 
 
 bot = commands.Bot(command_prefix=get_prefixes, help_command=None)
