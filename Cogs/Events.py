@@ -2,6 +2,12 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 
+def get_prefixes(bot, message):
+    with open('data/prefixes.json', 'r') as f:
+        prefixes = cj.load(f)
+    return prefixes[str(message.guild.id)]
+
+
 bot = commands.Bot(command_prefix='!k ')
 
 class Events(commands.Cog):
@@ -32,6 +38,15 @@ class Events(commands.Cog):
     async def on_member_remove(self, member):
         channel = get(member.guild.channels, name="🚪front-door")
         await channel.send(f"{member.mention} has abandoned ship.")
+
+
+    
+
+
+        prefixes.pop(str(guild.id))
+
+        with open('data/prefixes.json', 'w') as f:
+            cj.dump(prefixes, f, indent=4)
 
 
 

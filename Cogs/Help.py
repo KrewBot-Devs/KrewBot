@@ -18,6 +18,7 @@ class Help(commands.Cog):
             help_embed.add_field(name="Admin", value=f"``{ctx.prefix}help admin``", inline=True)
             help_embed.add_field(name='Other', value=f"``{ctx.prefix}help other``", inline=True)
             help_embed.add_field(name='Krew', value=f"``{ctx.prefix}help krew``", inline=True)
+            help_embed.add_field(name='Config', value=f"``{ctx.prefix}help config``", inline=True)
             help_embed.set_footer(text="Made by Emerald and Sh-wayz")
             await ctx.send(embed=help_embed)
 
@@ -69,6 +70,21 @@ class Help(commands.Cog):
         value=f'**{ctx.prefix}goods** - Get all trade prices for goods\n'
         f'**{ctx.prefix}ships** - Get all prices for ships.\n'
         f'**{ctx.prefix}items** - Get prices for all items.\n', inline=True)
+
+        help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
+
+        await ctx.send(embed=help_embed)
+
+    @help.command(name='config')
+    async def help_config(self, ctx):
+
+        help_embed = discord.Embed(color=discord.Color.orange())
+        help_embed.set_author(
+        name='Krew Bot Commands')
+
+        help_embed.add_field(
+        name='**Config Commands**',
+        value=f"**{ctx.prefix}config prefix *new value*** - Set a new prefix for the respective server.\n", inline=True)
 
         help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
 
