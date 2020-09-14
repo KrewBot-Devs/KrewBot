@@ -12,6 +12,11 @@ def get_prefixes(bot, message):
         prefixes = cj.load(f)
     return prefixes[str(message.guild.id)]
 
+def get_jlc(bot, message):
+    with open('data/joinleave.json', 'r') as f:
+        jlc = cj.load(f)
+    return jlc[str(message.guild.id)]
+
 
 bot = commands.Bot(command_prefix=get_prefixes, help_command=None)
 
@@ -33,6 +38,11 @@ async def on_guild_join(guild):
 async def on_guild_remove(guild):
     with open('data/prefixes.json', 'r') as f:
         prefixes = cj.load(f)
+
+        prefixes.pop(str(guild.id))
+
+        with open('data/prefixes.json', 'w') as f:
+            cj.dump(prefixes, f, indent=4)
 
 with open('data/keys.json', 'r') as keys_file:
     bot.key = cj.load(keys_file)

@@ -40,13 +40,27 @@ class Events(commands.Cog):
         await channel.send(f"{member.mention} has abandoned ship.")
 
 
-    
+    @bot.event
+    async def on_guild_join(guild):
+        with open('data/joinleave.json', 'r') as f:
+            jlc = cj.load(f)
 
 
-        prefixes.pop(str(guild.id))
+        jlc[str(guild.id)] = 'join-leave'
 
-        with open('data/prefixes.json', 'w') as f:
-            cj.dump(prefixes, f, indent=4)
+        with open('data/joinleave.json', 'w') as f:
+            cj.dump(jlc, f, indent=4)
+
+
+    @bot.event
+    async def on_guild_remove(guild):
+        with open('data/joinleave.json', 'r') as f:
+            pjlc = cj.load(f)
+
+            jlc.pop(str(guild.id))
+
+            with open('data/joinleave.json', 'w') as f:
+                cj.dump(jlc, f, indent=4)
 
 
 
