@@ -2,15 +2,8 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 
-def get_prefixes(bot, message):
-    with open('data/prefixes.json', 'r') as f:
-        prefixes = cj.load(f)
-    return prefixes[str(message.guild.id)]
 
-def get_jlc(bot, message):
-    with open('data/joinleave.json', 'r') as f:
-        jlc = cj.load(f)
-    return jlc[str(message.guild.id)]
+
 
 bot = commands.Bot(command_prefix='!k ')
 
@@ -28,19 +21,19 @@ class Events(commands.Cog):
     async def on_message(self, message):
         if self.bot.user.mentioned_in(message):
             await message.channel.send(
-            embed = discord.Embed(color=discord.Color.orange(), description='`Pls use !k to use a command.`'))
+            embed = discord.Embed(color=discord.Color.orange(), description='`Pls use k. to use a command.`'))
             await bot.process_commands(message)
 
 
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        channel = get(member.guild.channels, name=get_jlc)
+        channel = get(member.guild.channels, name="🚪front-door")
         await channel.send(f"Everyone welcome {member.mention} aboard!")
 
     @commands.Cog.listener()
     async def on_member_remove(self, member):
-        channel = get(member.guild.channels, name=get_jlc)
+        channel = get(member.guild.channels, name="🚪front-door")
         await channel.send(f"{member.mention} has abandoned ship.")
 
 

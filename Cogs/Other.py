@@ -24,7 +24,8 @@ class Other(commands.Cog):
         info_msg.add_field(name="Creators", value="Emerald#8617 &\n Sh-wayz#4749", inline=True)
         info_msg.add_field(name="Total Servers", value=str(len(self.bot.guilds)), inline=True)
         info_msg.add_field(name="Total Users", value=str(len(self.bot.users)), inline=True)
-        info_msg.add_field(name="Source Code", value="https://github.com/KrewBot-Devs/KrewBot", inline=True)
+        info_msg.add_field(name="Disbots Link", value='[disbots.gg](https://disbots.gg/bot/752948048669442228)', inline=True)
+        info_msg.add_field(name="Source Code", value="[github.com](https://github.com/KrewBot-Devs/KrewBot)", inline=True)
         info_msg.set_author(name="Krew Bot Information",)
         await ctx.send(embed=info_msg)
 
@@ -47,9 +48,24 @@ class Other(commands.Cog):
             mm = "minute"
         else:
             mm = "minutes"
-        await ctx.send(embed=discord.Embed(color=discord.Color.blue(),
+        await ctx.send(embed=discord.Embed(color=discord.Color.orange(),
                                            description="Bot has been online for " + str(days) + " " + dd + ", " + str(
                                                hours) + " " + hh + ", and " + str(minutes) + " " + mm + "!"))
+
+
+    @commands.command(name='invite')
+    async def invite(self, ctx):
+        inv_embed = discord.Embed(color=discord.Color.orange())
+
+
+        inv_embed.add_field(
+        name='Invite the bot!', value='[Click Here!](https://discord.com/api/oauth2/authorize?client_id=752948048669442228&permissions=519367&scope=bot)', inline=True)
+
+        inv_embed.set_footer(text="Made by Emerald and Sh-wayz")
+
+        inv_embed.set_footer(text="Made by Emerald and Sh-wayz")
+        await ctx.send(embed=inv_embed)
+
 
 
 

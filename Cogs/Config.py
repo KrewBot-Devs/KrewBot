@@ -32,20 +32,7 @@ class Config(commands.Cog):
         with open('data/prefixes.json', 'w') as f:
             cj.dump(prefixes, f, indent=4)
 
-    @config.command(name='joinleave')
-    @commands.guild_only()
-    @commands.has_permissions(manage_channels=True)
-    async def joinleave(self, ctx, prefix):
-        with open('data/joinleave.json', 'r') as f:
-            jlc = cj.load(f)
-
-        jlc[str(ctx.guild.id)] = prefix
-
-        with open('data/joinleave.json', 'w') as f:
-            cj.dump(jlc, f, indent=4)
-
-
-        await ctx.send(embed=discord.Embed(color=discord.Color.orange(), description=f'Join Leave channel has been updated!'))
+        await ctx.send(embed=discord.Embed(color=discord.Color.orange(), description=f'Prefix has been updated!'))
 
 
 
