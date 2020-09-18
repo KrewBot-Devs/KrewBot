@@ -28,12 +28,12 @@ class Events(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        channel = get(member.guild.channels, name="🚪front-door")
+        channel = get(member.guild.channels, name="join-leave")
         await channel.send(f"Everyone welcome {member.mention} aboard!")
 
     @commands.Cog.listener()
     async def on_member_remove(self, member):
-        channel = get(member.guild.channels, name="🚪front-door")
+        channel = get(member.guild.channels, name="join-leave")
         await channel.send(f"{member.mention} has abandoned ship.")
 
 

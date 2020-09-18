@@ -13,7 +13,8 @@ class Help(commands.Cog):
         if ctx.invoked_subcommand is None:
             help_embed = discord.Embed(color=discord.Color.orange())
             help_embed.set_author(
-                name="Krew Bot Commands")
+                name="Krew Bot Commands",
+                icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
 
             help_embed.add_field(name="Admin", value=f"``{ctx.prefix}help admin``", inline=True)
             help_embed.add_field(name='Other', value=f"``{ctx.prefix}help other``", inline=True)
@@ -28,7 +29,8 @@ class Help(commands.Cog):
 
         help_embed = discord.Embed(color=discord.Color.orange())
         help_embed.set_author(
-        name='Krew Bot Commands')
+        name='Krew Bot Commands',
+        icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
 
         help_embed.add_field(
         name='**Admin Commands**',
@@ -47,7 +49,8 @@ class Help(commands.Cog):
 
         help_embed = discord.Embed(color=discord.Color.orange())
         help_embed.set_author(
-        name='Krew Bot Commands')
+        name='Krew Bot Commands',
+        icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
 
         help_embed.add_field(
         name='**Other Commands**',
@@ -64,7 +67,8 @@ class Help(commands.Cog):
 
         help_embed = discord.Embed(color=discord.Color.orange())
         help_embed.set_author(
-        name='Krew Bot Commands')
+        name='Krew Bot Commands',
+        icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
 
         help_embed.add_field(
         name='**Krew Related Commands**',
@@ -81,7 +85,8 @@ class Help(commands.Cog):
 
         help_embed = discord.Embed(color=discord.Color.orange())
         help_embed.set_author(
-        name='Krew Bot Commands')
+        name='Krew Bot Commands',
+        icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
 
         help_embed.add_field(
         name='**Config Commands**',

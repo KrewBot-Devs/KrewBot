@@ -26,7 +26,8 @@ class Other(commands.Cog):
         info_msg.add_field(name="Total Users", value=str(len(self.bot.users)), inline=True)
         info_msg.add_field(name="Disbots Link", value='[disbots.gg](https://disbots.gg/bot/752948048669442228)', inline=True)
         info_msg.add_field(name="Source Code", value="[github.com](https://github.com/KrewBot-Devs/KrewBot)", inline=True)
-        info_msg.set_author(name="Krew Bot Information",)
+        info_msg.set_author(name="Krew Bot Information",
+        icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
         await ctx.send(embed=info_msg)
 
     @commands.command(name="uptime", aliases=['up'])
@@ -55,13 +56,10 @@ class Other(commands.Cog):
 
     @commands.command(name='invite')
     async def invite(self, ctx):
-        inv_embed = discord.Embed(color=discord.Color.orange())
+        inv_embed = discord.Embed(color=discord.Color.orange(), description='[Click Here!](https://discord.com/api/oauth2/authorize?client_id=752948048669442228&permissions=519367&scope=bot)')
 
-
-        inv_embed.add_field(
-        name='Invite the bot!', value='[Click Here!](https://discord.com/api/oauth2/authorize?client_id=752948048669442228&permissions=519367&scope=bot)', inline=True)
-
-        inv_embed.set_footer(text="Made by Emerald and Sh-wayz")
+        inv_embed.set_author(name="Invite the bot!",
+        icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
 
         inv_embed.set_footer(text="Made by Emerald and Sh-wayz")
         await ctx.send(embed=inv_embed)

@@ -45,8 +45,5 @@ class Config(commands.Cog):
 
 
 
-
-
-
 def setup(bot):
     bot.add_cog(Config(bot))
