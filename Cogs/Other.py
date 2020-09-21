@@ -71,7 +71,7 @@ class Other(commands.Cog):
     async def server_info(self, ctx, g: discord.Guild = None):
         g = ctx.guild if g is None else g
 
-        embed = discord.Embed(color=discord.Color.blue())
+        embed = discord.Embed(color=discord.Color.orange())
 
         embed.set_author(name=g.name, icon_url=g.icon_url_as(format="png"))
 
