@@ -36,14 +36,29 @@ class Krew(commands.Cog):
             await ctx.send(embed=embed)
 
     @commands.command(name='ships')
-    async def ships(self, ctx):
-        embed=discord.Embed(title="Ship Prices", color=discord.Color.orange())
-        embed.add_field(name="Brazil", value="*Raft 1:* 500\n*Raft 2:* 1300\n*Raft 3:* 2400\n*Trader 1:* 4350\n*Boat 1:* 6900\n*Boat 2:* 11k\n*Boat 3:* 16k\n*Destroyer 1:* 50k\n*Destroyer 2:* 80k\n*Destroyer 3:* 130k\n*Baby Fancy:* 8k", inline=True)
-        embed.add_field(name="Guinea", value="*Raft 1:* 500\n*Raft 2:* 1300\n*Raft 3:* 2400\n*Trader 1:* 4350\n*Boat 1:* 6900\n*Boat 2:* 11k\n*Boat 3:* 16k\n*Destroyer 1:* 50k\n*Destroyer 2:* 80k\n*Destroyer 3:* 130k\n*Calm Spirit:* 120k", inline=True)
-        embed.add_field(name="Labrador", value="*Raft 1:* 500\n*Raft 2:* 1300\n*Raft 3:* 2400\n*Trader 1:* 4350\n*Boat 1:* 6900\n*Boat 2:* 11k\n*Boat 3:* 16k\n*Destroyer 1:* 50k\n*Destroyer 2:* 80k\n*Destroyer 3:* 130k\n*Royal Fortune:* 70k", inline=True)
-        embed.add_field(name="Spain", value="*Raft 1:* 500\n*Raft 2:* 1300\n*Raft 3:* 2400\n*Trader 1:* 4350\n*Boat 1:* 6900\n*Boat 2:* 11k\n*Boat 3:* 16k\n*Destroyer 1:* 50k\n*Destroyer 2:* 80k\n*Destroyer 3:* 130k\n*Baby Fancy:* 8k\n*Royal Fortune:* 70k\n*Calm Spirit:* 120k\n*Queen Barb's Justice:* 200k", inline=True)
-        embed.add_field(name="Jamaica", value="*Trader 2:* 11k\n*Trader 3:* 30k\n*Baby Fancy 2:* 40k\n*Royal Fortune 2:* 110k\n*Calm Spirit 2:* 170k\n*Queen Barb's Justice 2:* 350k", inline=True)
-        await ctx.send(embed=embed)
+    async def ships(self, ctx, ship='All'):
+        ship = ship.capitalize()
+        if ship == 'All':
+            embed=discord.Embed(color=discord.Color.orange())
+            embed.add_field(name="Ship Prices", value="*Raft 1:* 500\n*Raft 2:* 1300\n*Raft 3:* 2400\n*Trader 1:* 4350\n*Trader 2:* 11k\n*Trader 3:* 30k\n*Boat 1:* 6900\n*Boat 2:* 11k\n*Boat 3:* 16k\n*Destroyer 1:* 50k\n*Destroyer 2:* 80k\n*Destroyer 3:* 130k\n*Baby Fancy:* 8k\n*Baby Fancy 2:* 40k\n*Royal Fortune:* 70k\n*Royal Fortune 2:* 110k\n*Calm Spirit:* 120k\n*Calm Spirit 2:* 170k\n*Queen Barb's Justice:* 200k\n*Queen Barb's Justice 2:* 350k", inline=True)
+            embed.set_footer(text=f'Do {ctx.prefix}ships <ship name> for more info on a ship!')
+            await ctx.send(embed=embed)
+        elif ship == 'Raft1' or ship == 'Raft2' or ship == 'Raft3' or ship == 'Trader1' or ship == 'Trader2' or ship == 'Trader3' or ship == 'Boat1' or ship == 'Boat2' or ship == 'Boat3' or ship == 'Destroyer1' or ship == 'Destroyer2' or ship == 'Destroyer3' or ship == 'Babyfancy' or ship == 'Babyfancy2' or ship == 'Royalfortune' or ship == 'Royalfortune2' or ship == 'Calmspirit' or ship == 'Calmspirit2' or ship == 'Qbj' or ship == 'Qbj2':
+            with open( 'data/ships.json', 'r') as stuff:
+                ships = cj.load(stuff)
+
+            if ship in ships:
+                embed=discord.Embed(color=discord.Color.orange())
+
+                temp = []
+                for k, v in ships[ship].items():
+
+                    temp.append(str(k + ': ' + v))
+                val = '\n'.join(temp)
+                embed.add_field(name=ship, value=val, inline=True)
+                embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
+            await ctx.send(embed=embed)
+
 
 
     @commands.command(name='items')
