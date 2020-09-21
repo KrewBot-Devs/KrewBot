@@ -28,6 +28,9 @@ class Admin(commands.Cog):
                 color=discord.Color.orange(),
                 description='''Theres too many messages specified.''')
             await ctx.send(embed=limit_embed)
+        if n <= -1:
+            too_low = discord.Embed(color=discord.Color.orange(), description="You can't clear a negative amount of messages!")
+            await ctx.send(embed=too_low)
 
     @commands.command(name="kick", help=' - throw someone overboard')
     @commands.guild_only()
