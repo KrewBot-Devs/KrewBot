@@ -34,6 +34,7 @@ class Config(commands.Cog):
 
         await ctx.send(embed=discord.Embed(color=discord.Color.orange(), description=f'Prefix has been updated!'))
 
+    
 
 
 
