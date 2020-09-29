@@ -10,21 +10,55 @@ class Owner(commands.Cog):
 
     @commands.command(name='load')
     @commands.is_owner()
-    async def load_cog(self, ctx, cog):
-        self.bot.load_extension('Cogs.' + cog)
-        await ctx.send('👍')
+    async def load_cog(self, ctx, cog = 'all'):
+        if cog == "all":
+            print("reloaded all cogs")
+            await ctx.send('👍')
+            self.bot.load_extension('Cogs.Admin')
+            self.bot.load_extension('Cogs.Config')
+            self.bot.load_extension('Cogs.Events')
+            self.bot.load_extension('Cogs.Help')
+            self.bot.load_extension('Cogs.Krew')
+            self.bot.load_extension('Cogs.Other')
+        elif cog == "Admin" or cog == "Config" or cog == "Events" or cog == "Help" or cog == "Krew" or cog == "Other":
+            self.bot.load_extension('Cogs.' + cog)
+            print(f"Loaded {cog}")
+            await ctx.send('👍')
 
     @commands.command(name='unload')
     @commands.is_owner()
-    async def unload_cog(self, ctx, cog):
-        self.bot.unload_extension('Cogs.' + cog)
-        await ctx.send('👍')
+    async def unload_cog(self, ctx, cog = "all"):
+        if cog == "all":
+            print("Unloaded all cogs")
+            await ctx.send('👍')
+            self.bot.unload_extension('Cogs.Admin')
+            self.bot.unload_extension('Cogs.Config')
+            self.bot.unload_extension('Cogs.Events')
+            self.bot.unload_extension('Cogs.Help')
+            self.bot.unload_extension('Cogs.Krew')
+            self.bot.unload_extension('Cogs.Other')
+        elif cog == "Admin" or cog == "Config" or cog == "Events" or cog == "Help" or cog == "Krew" or cog == "Other":
+            self.bot.unload_extension('Cogs.' + cog)
+            print(f"Unloaded {cog}")
+            await ctx.send('👍')
 
     @commands.command(name='reload')
     @commands.is_owner()
-    async def reload_cog(self, ctx, cog):
-        self.bot.reload_extension('Cogs.' + cog)
-        await ctx.send('👍')
+    async def reload_cog(self, ctx, cog = "all"):
+        if cog == 'all':
+            print("reloaded all cogs")
+            await ctx.send('👍')
+            self.bot.reload_extension('Cogs.Admin')
+            self.bot.reload_extension('Cogs.Config')
+            self.bot.reload_extension('Cogs.Events')
+            self.bot.reload_extension('Cogs.Help')
+            self.bot.reload_extension('Cogs.Krew')
+            self.bot.reload_extension('Cogs.Other')
+            self.bot.reload_extension('Cogs.Owner')
+        elif cog == 'Admin' or cog == 'Config' or cog == 'Events' or cog == 'Help' or cog == 'Krew' or cog == 'Other' or cog == 'Owner':
+            self.bot.reload_extension('Cogs.' + cog)
+            print(f"reloaded {cog}")
+            await ctx.send('👍')
 
     @commands.command(name='gitpull')
     @commands.is_owner()
