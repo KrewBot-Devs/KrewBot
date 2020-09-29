@@ -46,16 +46,10 @@ class Owner(commands.Cog):
 
                 help_embed.add_field(name="Cogs", value=f"``{ctx.prefix}ownerhelp cogs``", inline=True)
                 help_embed.add_field(name='Git', value=f"``{ctx.prefix}ownerhelp git``", inline=True)
-<<<<<<< HEAD
                 help_embed.add_field(name='Other', value=f"``{ctx.prefix}ownerhelp other``", inline=True)
 
                 help_embed.set_footer(text="Made by the only people who can use this command.")
                 await ctx.send(embed=help_embed)
-=======
-                help_embed.add_field(name='Other', value=f"``{ctx.prefix}ownerhelp other", inline=True)
-            help_embed.set_footer(text="Made by the only people who can use this command.")
-            await ctx.send(embed=help_embed)
->>>>>>> d953f6f892bdb564c53eac1fd932c5116d2507b3
 
 
     @ownerhelp.command(name='cogs')
@@ -70,17 +64,9 @@ class Owner(commands.Cog):
             icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
 
             help_embed.add_field(
-<<<<<<< HEAD
             name='**Cooooooogs**', value = f"**{ctx.prefix}load** *cog name* - loads cog lol what did you think.\n"
             f"**{ctx.prefix}unload** *cog name* - seems pretty obvious to me tbh.\n"
             f"**{ctx.prefix}reload** *Number of messages* - Remove set amount of messages.\n", inline=True)
-=======
-            name='**Cooooooogs**',
-            inline=False, 
-            value=f'''**{ctx.prefix}load** *\{cogname\}* - loads cog lol what did you think.\n
-            **{ctx.prefix}unload** *\{cog name\}* - seems pretty obvious to me tbh.\n
-           **{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n')
->>>>>>> d953f6f892bdb564c53eac1fd932c5116d2507b3
 
             help_embed.set_footer(text="Need more help? You're an owner go fix it.")
 
