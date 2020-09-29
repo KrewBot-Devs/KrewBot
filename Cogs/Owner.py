@@ -12,16 +12,19 @@ class Owner(commands.Cog):
     @commands.is_owner()
     async def load_cog(self, ctx, cog):
         self.bot.load_extension('Cogs.' + cog)
+        await ctx.send('👍')
 
     @commands.command(name='unload')
     @commands.is_owner()
     async def unload_cog(self, ctx, cog):
         self.bot.unload_extension('Cogs.' + cog)
+        await ctx.send('👍')
 
     @commands.command(name='reload')
     @commands.is_owner()
     async def reload_cog(self, ctx, cog):
         self.bot.reload_extension('Cogs.' + cog)
+        await ctx.send('👍')
 
     @commands.command(name='gitpull')
     @commands.is_owner()
@@ -32,6 +35,7 @@ class Owner(commands.Cog):
             await ctx.send(embed=discord.Embed(color=discord.Color.orange(), description=f'```{log_file.read()}```'))
 
         os.remove('git_pull_log')
+        await ctx.send('👍')
 
     @commands.group(name='ownerhelp')
     @commands.is_owner()
