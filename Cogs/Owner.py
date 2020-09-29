@@ -46,7 +46,7 @@ class Owner(commands.Cog):
 
                 help_embed.add_field(name="Cogs", value=f"``{ctx.prefix}ownerhelp cogs``", inline=True)
                 help_embed.add_field(name='Git', value=f"``{ctx.prefix}ownerhelp git``", inline=True)
-                help_embed.add_field(name='Other, value=f"``{ctx.prefix}ownerhelp other", inline=True)
+                help_embed.add_field(name='Other', value=f"``{ctx.prefix}ownerhelp other", inline=True)
             help_embed.set_footer(text="Made by the only people who can use this command.")
             await ctx.send(embed=help_embed)
 
