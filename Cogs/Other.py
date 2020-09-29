@@ -71,7 +71,7 @@ class Other(commands.Cog):
 
     @commands.command(name='ping')
     async def ping(self, ctx):
-        if round(self.bot.latency * 1000, 2) == 69 or round(self.bot.latency * 1000, 2) == 69.69:
+        if round(self.bot.latency * 1000, 2) == 69.0 or round(self.bot.latency * 1000, 2) == 69.69:
             ping = 'The noice number'
         else:
             ping = round(self.bot.latency * 1000, 2)
