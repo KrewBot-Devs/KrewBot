@@ -90,6 +90,7 @@ class Owner(commands.Cog):
                 , inline=False)
 
             help_embed.set_footer(text="Need more help? You're an owner go fix it.)
+            ctx.send(embed=help_embed)
 
       
     @ownerhelp.command(name='git')
