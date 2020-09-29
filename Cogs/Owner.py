@@ -51,7 +51,7 @@ class Owner(commands.Cog):
 
 
     @ownerhelp.command(name='cogs')
-    async def help_admin(self, ctx):
+    async def help_cogs(self, ctx):
 
         async with ctx.typing():
             await asyncio.sleep(1)
@@ -74,7 +74,7 @@ class Owner(commands.Cog):
 
 
     @ownerhelp.command(name='git')
-    async def help_admin(self, ctx):
+    async def help_git(self, ctx):
 
         async with ctx.typing():
             await asyncio.sleep(1)
@@ -94,7 +94,7 @@ class Owner(commands.Cog):
 
       
     @ownerhelp.command(name='git')
-    async def help_admin(self, ctx):
+    async def help_other(self, ctx):
 
         async with ctx.typing():
             await asyncio.sleep(1)    
