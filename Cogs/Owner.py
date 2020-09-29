@@ -74,8 +74,8 @@ class Owner(commands.Cog):
          await ctx.send(embed=help_embed)
 
 
-    @ownerhelp.command(name='git')
-    async def help_git(self, ctx):
+     @ownerhelp.command(name='git')
+     async def help_git(self, ctx):
 
         async with ctx.typing():
             await asyncio.sleep(1)
