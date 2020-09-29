@@ -90,7 +90,7 @@ class Owner(commands.Cog):
 
             help_embed.add_field(
             name='**git is the best**',
-            value=f'**{ctx.prefix}gitpull** *cogname* - <:megathonk:683696698459029566> whaddaya think.\n'
+            value=f'**{ctx.prefix}gitpull** *cogname* - <:megathonk: name:683696698459029566> whaddaya think.\n'
                 , inline=False)
 
             help_embed.set_footer(text="Need more help? You're an owner go fix it.")
