@@ -32,6 +32,8 @@ class Owner(commands.Cog):
             await ctx.send(embed=discord.Embed(color=discord.Color.orange, description=f'```{log_file.read()}```'))
 
         os.remove('git_pull_log')
+        
+        
    @commands.group(name='ownerhelp')
    @commands.is_owner()
     async def ownerhelp(self, ctx):
@@ -65,8 +67,7 @@ class Owner(commands.Cog):
             name='**Cooooooogs**',
             value=f'**{ctx.prefix}load** *\{cogname\}* - loads cog lol what did you think.\n'
             f'**{ctx.prefix}unload** *\{cog name\}* - seems pretty obvious to me tbh.\n'
-           f'**{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n'
-                , inline=False)
+           f'**{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n', inline=False)
 
          help_embed.set_footer(text="Need more help? You're an owner go fix it.")
 
