@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord.utils import get
 import arrow
 import asyncio
-import random
+
 
 bot = commands.Bot(command_prefix='!k ')
 
@@ -32,7 +32,7 @@ class Other(commands.Cog):
             icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
             await ctx.send(embed=info_msg)
 
-    
+
 
 
     @commands.command(name='invite')
@@ -72,9 +72,7 @@ class Other(commands.Cog):
     @commands.command(name='ping')
     async def ping(self, ctx):
         await ctx.send(embed=discord.Embed(color=discord.Color.orange(),
-                                           description=f"``{random.randint(1, 7304)} ms``"))
-       ## await ctx.send(embed=discord.Embed(color=discord.Color.orange(),
-        #                                   description=f"``{round(self.bot.latency * 1000, 2)} ms``"))
+                                           description=f"``{round(self.bot.latency * 1000, 2)} ms``"))
 
 
 def setup(bot):
