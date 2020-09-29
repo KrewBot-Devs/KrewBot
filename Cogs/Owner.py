@@ -65,12 +65,12 @@ class Owner(commands.Cog):
             name='**Cooooooogs**',
             value=f'**{ctx.prefix}load** *\{cogname\}* - loads cog lol what did you think.\n'
             f'**{ctx.prefix}unload** *\{cog name\}* - seems pretty obvious to me tbh.\n'
-            f'**{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n'
+           f'**{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n'
                 , inline=False)
 
-            help_embed.set_footer(text="Need more help? You're an owner go fix it.")
+         help_embed.set_footer(text="Need more help? You're an owner go fix it.")
 
-            await ctx.send(embed=help_embed)
+         await ctx.send(embed=help_embed)
 
 
     @ownerhelp.command(name='git')
@@ -98,7 +98,7 @@ class Owner(commands.Cog):
 
         async with ctx.typing():
             await asyncio.sleep(1)    
-            await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/081/wow.jpg)
+        await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/081/wow.jpg)
 
 
 def setup(bot):
