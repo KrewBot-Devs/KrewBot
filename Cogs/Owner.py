@@ -68,7 +68,7 @@ class Owner(commands.Cog):
             f'**{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n'
                 , inline=False)
 
-            help_embed.set_footer(text="Need more help? You're an owner go fix it.)
+            help_embed.set_footer(text="Need more help? You're an owner go fix it.")
 
             await ctx.send(embed=help_embed)
 
