@@ -34,8 +34,7 @@ class Owner(commands.Cog):
         with open('git_pull_log', 'r') as log_file:
             await ctx.send(embed=discord.Embed(color=discord.Color.orange(), description=f'```{log_file.read()}```'))
 
-        os.remove('git_pull_log')
-        await ctx.send('👍')
+        
 
     @commands.group(name='ownerhelp')
     @commands.is_owner()
