@@ -71,8 +71,12 @@ class Other(commands.Cog):
 
     @commands.command(name='ping')
     async def ping(self, ctx):
+        if round(self.bot.latency * 1000, 2) == 69 or round(self.bot.latency * 1000, 2) == 69.69:
+            ping = 'The noice number'
+        else:
+            ping = round(self.bot.latency * 1000, 2)
         await ctx.send(embed=discord.Embed(color=discord.Color.orange(),
-                                           description=f"``{round(self.bot.latency * 1000, 2)} ms``"))
+                                           description=f"``{ping} ms``"))
 
 
 def setup(bot):
