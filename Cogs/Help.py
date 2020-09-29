@@ -9,7 +9,7 @@ class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.group(name='help', aliases=['halp'])
+    @commands.group(name='help', aliases=['halp', 'fack', 'wat'])
     async def help(self, ctx):
         if ctx.invoked_subcommand is None:
             async with ctx.typing():

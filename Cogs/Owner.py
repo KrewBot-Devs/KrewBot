@@ -2,6 +2,7 @@ from discord.ext import commands
 import discord
 import os
 import asyncio
+import classyjson as cj
 
 class Owner(commands.Cog):
     def __init__(self, bot):
@@ -70,6 +71,20 @@ class Owner(commands.Cog):
 
         os.remove('git_pull_log')
 
+    @commands.command(name='prefix')
+    @commands.guild_only()
+    @commands.is_owner()
+    async def prefix(self, ctx, prefix):
+        with open('data/prefixes.json', 'r') as f:
+            prefixes = cj.load(f)
+
+        prefixes[str(ctx.guild.id)] = prefix
+
+        with open('data/prefixes.json', 'w') as f:
+            cj.dump(prefixes, f, indent=4)
+
+        await ctx.send(embed=discord.Embed(color=discord.Color.orange(), description=f'Prefix has been updated!'))
+
 
     @commands.group(name='ownerhelp')
     @commands.is_owner()
@@ -124,7 +139,7 @@ class Owner(commands.Cog):
 
             help_embed.add_field(
             name='**git is the best**',
-            value=f'**{ctx.prefix}gitpull** *cogname* - <:megathonk:760543221246853120> whaddaya think.\n'
+            value=f'**{ctx.prefix}gitpull** *cog name* - <:megathonk:760543221246853120> whaddaya think.\n'
                 , inline=False)
 
             help_embed.set_footer(text="Need more help? You're an owner go fix it.")
