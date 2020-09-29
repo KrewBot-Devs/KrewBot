@@ -6,7 +6,7 @@ import os
 class Owner(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.d = self.bot.d
+        
 
     @commands.command(name='load')
     @commands.is_owner()
