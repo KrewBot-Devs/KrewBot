@@ -33,10 +33,9 @@ class Owner(commands.Cog):
 
         os.remove('git_pull_log')
         
-        
-   @commands.group(name='ownerhelp')
-   @commands.is_owner()
-    async def ownerhelp(self, ctx):
+    @commands.group(name='ownerhelp')
+    @commands.is_owner()
+     async def ownerhelp(self, ctx):
         if ctx.invoked_subcommand is None:
             async with ctx.typing():
                 await asyncio.sleep(1)
