@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord.utils import get
 import arrow
 import asyncio
-
+import random
 
 bot = commands.Bot(command_prefix='!k ')
 
@@ -72,7 +72,9 @@ class Other(commands.Cog):
     @commands.command(name='ping')
     async def ping(self, ctx):
         await ctx.send(embed=discord.Embed(color=discord.Color.orange(),
-                                           description=f"``{round(self.bot.latency * 1000, 2)} ms``"))
+                                           description=f"``{random.randint(1, 7304)} ms``"))
+       ## await ctx.send(embed=discord.Embed(color=discord.Color.orange(),
+        #                                   description=f"``{round(self.bot.latency * 1000, 2)} ms``"))
 
 
 def setup(bot):
