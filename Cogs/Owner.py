@@ -64,9 +64,10 @@ class Owner(commands.Cog):
 
             help_embed.add_field(
             name='**Cooooooogs**',
+            inline=False, 
             value=f'''**{ctx.prefix}load** *\{cogname\}* - loads cog lol what did you think.\n
             **{ctx.prefix}unload** *\{cog name\}* - seems pretty obvious to me tbh.\n
-           **{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n', inline=False)
+           **{ctx.prefix}reload** *Number of messages.* - Remove set amount of messages.\n')
 
          help_embed.set_footer(text="Need more help? You're an owner go fix it.")
 
