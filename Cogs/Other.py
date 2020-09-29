@@ -72,7 +72,7 @@ class Other(commands.Cog):
     @commands.command(name='ping')
     async def ping(self, ctx):
         await ctx.send(embed=discord.Embed(color=discord.Color.orange(),
-                                           description=f"``{round(self.bot.latency * 1000, 2) - 1000} ms``"))
+                                           description=f"``{round(self.bot.latency * 1000, 2)} ms``"))
 
 
 def setup(bot):
