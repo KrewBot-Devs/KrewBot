@@ -44,7 +44,7 @@ async def on_guild_remove(guild):
 with open('data/keys.json', 'r') as keys_file:
     bot.key = cj.load(keys_file)
 
-initial_extensions = ['Cogs.Admin','Cogs.Events','Cogs.Help','Cogs.Other','Cogs.Krew','Cogs.Config']
+initial_extensions = ['Cogs.Admin','Cogs.Events','Cogs.Help','Cogs.Other','Cogs.Krew','Cogs.Config', 'Cogs.Owner']
 
 for extension in initial_extensions:
     bot.load_extension(extension)
