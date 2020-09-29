@@ -29,7 +29,7 @@ class Owner(commands.Cog):
         os.system('git pull > git_pull_log 2>&1')
 
         with open('git_pull_log', 'r') as log_file:
-            await ctx.send(embed=discord.Embed(color=self.d.cc, description=f'```{log_file.read()}```'))
+            await ctx.send(embed=discord.Embed(color=discord.Color.orange, description=f'```{log_file.read()}```'))
 
         os.remove('git_pull_log')
 
