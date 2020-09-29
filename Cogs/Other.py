@@ -17,7 +17,7 @@ class Other(commands.Cog):
         self.db = self.bot.get_cog("Database")
 
 
-    @commands.command(name="info", aliases=["information"])
+    @commands.command(name="info", aliases=["information",'infowmation'])
     async def information(self, ctx):
         async with ctx.typing():
             await asyncio.sleep(1)
