@@ -64,7 +64,8 @@ class Help(commands.Cog):
             value=f'**{ctx.prefix}info** - Displays some info about the bot.\n'
             f'**{ctx.prefix}uptime** - Show how long the bot has been running.\n'
             f'**{ctx.prefix}invite** - Invite the bot to your server.\n'
-            f'**{ctx.prefix}guild** - Info about current server.', inline=False)
+            f'**{ctx.prefix}guild** - Info about current server.\n'
+            f'**{ctx.prefix}ping** - Get bot to API latency.', inline=False)
 
             help_embed.set_footer(text="Need more help? DM @Emerald#8617 or @Sh-wayz#4749")
 
