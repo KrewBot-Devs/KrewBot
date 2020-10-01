@@ -191,7 +191,7 @@ class Owner(commands.Cog):
         await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=msg))
     @commands.command(name='stream')
     @commands.is_owner()
-    async def listen(self, ctx, link, *, msg):
+    async def stream(self, ctx, link, *, msg):
         await bot.change_presence(activity=discord.Streaming(name=msg, url=link))  
 
 
