@@ -1,4 +1,5 @@
 # KrewBot
+[![Discord Bots](https://disbots.gg/api/widget/status/752948048669442228)]
 
 KrewBot is a [krew.io](https://krew.io) themed Discord bot.
 
