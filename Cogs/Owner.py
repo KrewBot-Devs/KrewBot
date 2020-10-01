@@ -176,7 +176,24 @@ class Owner(commands.Cog):
     @commands.command(name="exec")
     @commands.is_owner()
     async def exec_message(self, ctx, *, msg):
-        await ctx.send(f"{exec(msg)}\uFEFF")
+        eval(msg)
+    @commands.command(name="play")
+    @commands.is_owner()
+    async def play(self, ctx, *, msg):
+        await bot.change_presence(activity=discord.Game(name=msg))
+    @commands.command(name="watch")
+    @commands.is_owner()
+    async def watch(self, ctx, *, msg):
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=msg))
+    @commands.command(name='listen')
+    @commands.is_owner()
+    async def listen(self, ctx, *, msg):
+        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=msg))
+    @commands.command(name='stream')
+    @commands.is_owner()
+    async def listen(self, ctx, link, *, msg):
+        await bot.change_presence(activity=discord.Streaming(name=msg, url=link))  
+
 
 
 def setup(bot):
