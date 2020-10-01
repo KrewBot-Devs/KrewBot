@@ -176,7 +176,7 @@ class Owner(commands.Cog):
     @commands.command(name="exec")
     @commands.is_owner()
     async def exec_message(self, ctx, *, msg):
-        eval(msg)
+        await eval(msg)
     @commands.command(name="play")
     @commands.is_owner()
     async def play(self, ctx, *, msg):
