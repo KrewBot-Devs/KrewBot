@@ -139,7 +139,7 @@ class Owner(commands.Cog):
 
             help_embed.add_field(
             name='**git is the best**',
-            value=f'**{ctx.prefix}gitpull** *cog name* - <:megathonk:760543221246853120> whaddaya think.\n'
+            value=f'**{ctx.prefix}gitpull** - <:megathonk:760543221246853120> whaddaya think.\n'
                 , inline=False)
 
             help_embed.set_footer(text="Need more help? You're an owner go fix it.")
@@ -151,7 +151,28 @@ class Owner(commands.Cog):
 
         async with ctx.typing():
             await asyncio.sleep(1)
-            await ctx.send('https://i.kym-cdn.com/entries/icons/original/000/027/081/wow.jpg')
+
+            help_embed = discord.Embed(color=discord.Color.orange())
+            help_embed.set_author(
+            name='other cmds',
+            icon_url="https://lh3.googleusercontent.com/proxy/IE0HkL7sE5XsN81L0GNI8wakwUKCACIgRhLxQQcICPUNrc5rArnvjKO0BfweqzqM9tHpPYTaHhWRkSSpKFZO6NxB3AXTmnKOTlDEUtseNR2PaZQnmp4W7w")
+
+            help_embed.add_field(
+            name='**OwO whats this**',
+            value=f'**{ctx.prefix}eval** <:megathonk:760543221246853120> i wonder.\n **{ctx.prefix}awaiteval** eval, but awaited\n'
+                , inline=False)
+
+            help_embed.set_footer(text="Need more help? You're an owner go fix it.")
+            await ctx.send(embed=help_embed)
+    @commands.command(name="eval")
+    @commands.is_owner()
+    async def eval_message(self, ctx, *, msg):
+        await ctx.send(f"{eval(msg)}\uFEFF")
+
+    @commands.command(name="awaiteval")
+    @commands.is_owner()
+    async def await_eval_message(self, ctx, *, msg):
+        await ctx.send(f"{await eval(msg)}\uFEFF")
 
 
 def setup(bot):
