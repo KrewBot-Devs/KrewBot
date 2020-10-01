@@ -180,19 +180,19 @@ class Owner(commands.Cog):
     @commands.command(name="play")
     @commands.is_owner()
     async def play(self, ctx, *, msg):
-        await bot.change_presence(activity=discord.Game(name=msg))
+        await self.bot.change_presence(activity=discord.Game(name=msg))
     @commands.command(name="watch")
     @commands.is_owner()
     async def watch(self, ctx, *, msg):
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=msg))
+        await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=msg))
     @commands.command(name='listen')
     @commands.is_owner()
     async def listen(self, ctx, *, msg):
-        await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=msg))
+        await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=msg))
     @commands.command(name='stream')
     @commands.is_owner()
     async def stream(self, ctx, link, *, msg):
-        await bot.change_presence(activity=discord.Streaming(name=msg, url=link))  
+        await self.bot.change_presence(activity=discord.Streaming(name=msg, url=link))  
 
 
 
