@@ -173,6 +173,10 @@ class Owner(commands.Cog):
     @commands.is_owner()
     async def await_eval_message(self, ctx, *, msg):
         await ctx.send(f"{await eval(msg)}\uFEFF")
+    @commands.command(name="exec")
+    @commands.is_owner()
+    async def exec_message(self, ctx, *, msg):
+        await ctx.send(f"{exec(msg)}\uFEFF")
 
 
 def setup(bot):
