@@ -1,6 +1,6 @@
 # KrewBot
 [![Status](https://disbots.gg/api/widget/752948048669442228/status)](https://disbots.gg/bot/752948048669442228)           
-[![Servers](https://disbots.gg/api/widget/752948048669442228/servers)](https://disbots.gg/bot/752948048669442228)           
+Broken atm - [![Servers](https://disbots.gg/api/widget/752948048669442228/servers)](https://disbots.gg/bot/752948048669442228)           
 [![Likes](https://disbots.gg/api/widget/752948048669442228/likes)](https://disbots.gg/bot/752948048669442228)          
 
 KrewBot is a [krew.io](https://krew.io) themed Discord bot.
