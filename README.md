@@ -24,6 +24,7 @@ KrewBot currently has administration commands, and [krew](https://krew.io) theme
 **k.uptime** - Displays the bot current uptime.
 **k.invite** - Get an invite link for the bot.
 **k.guild** - Get info about the respective guild.
+**k.ping*** - Displays the bots latency/ping.
 #### Config Commands
 **k.config prefix** - Set the prefix for that server.
 
