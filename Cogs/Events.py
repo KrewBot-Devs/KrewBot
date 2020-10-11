@@ -11,11 +11,11 @@ class Events(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    server = len(self.bot.guilds)
+    
 
     @commands.Cog.listener()
     async def on_ready(self):
-        activity = discord.Game(name=f'{server}', type=3)
+        activity = discord.Game(name=f'a', type=3)
         await self.bot.change_presence(status=discord.Status.online, activity=activity)
 
 

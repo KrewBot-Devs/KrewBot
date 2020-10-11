@@ -80,7 +80,7 @@ class Krew(commands.Cog):
                 embed.add_field(name='Jamaica', value='*Air Pegleg:* 22k\n*Blue Gunpowder:* 50k\n*Cannon Distance Upgrade:* 4k\n*Attack Speed Upgrade:* 2k\n*Damage Upgrade:* 5k\n*Ship Speed Upgrade:* 3k\n*Demolisher:* 100k')
                 embed.set_footer(text='Do k! items <item name> for more info on an item.')
                 await ctx.send(embed=embed)
-            elif item == "Distance" or item == "AttackSpeed" or item == "Damage" or item == "Speed" or item == "Bruiser" or item == "Drifter" or item == "SteelCannon" or item == "Pegleg" or item == "Gunpowder" or item == "Demolisher":
+            elif item == "CannonDistance" or item == "AttackSpeed" or item == "Damage" or item == "ShipSpeed" or item == "Bruiser" or item == "Drifter" or item == "SteelCannon" or item == "AirPegleg" or item == "BlueGunpowder" or item == "Demolisher":
                 with open( 'data/items.json', 'r') as stuff:
                     items = cj.load(stuff)
 
