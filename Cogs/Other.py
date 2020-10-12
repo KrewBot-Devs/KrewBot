@@ -4,9 +4,7 @@ from discord.utils import get
 import arrow
 import asyncio
 
-
-bot = commands.Bot(command_prefix='!k ')
-
+dbc = pydisbots.Client(bot, bot.key.disbotAuth, autopost_stats=True, webhook_port=8675, webhook_path='/disbotsHook')
 
 
 class Other(commands.Cog):
