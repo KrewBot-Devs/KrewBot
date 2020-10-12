@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.utils import get
 import classyjson as cj
 import logging
+import pydisbots
 
 # set up basic logging
 #logging.basicConfig(level=logging.DEBUG)
@@ -43,7 +44,7 @@ async def on_guild_remove(guild):
 
 with open('data/keys.json', 'r') as keys_file:
     bot.key = cj.load(keys_file)
-
+dbc = pydisbots.Client(bot, bot.key.disbotAuth, autopost_stats=True, webhook_port=8675, webhook_path='/disbotsHook')
 initial_extensions = ['Cogs.Admin','Cogs.Events','Cogs.Help','Cogs.Other','Cogs.Krew','Cogs.Config', 'Cogs.Owner', 'Cogs.Uptime']
 
 for extension in initial_extensions:
