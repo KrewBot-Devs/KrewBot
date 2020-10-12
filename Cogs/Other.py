@@ -3,9 +3,6 @@ from discord.ext import commands
 from discord.utils import get
 import arrow
 import asyncio
-import pydisbots
-
-dbc = pydisbots.Client(bot, bot.key.disbotAuth, autopost_stats=True, webhook_port=8675, webhook_path='/disbotsHook')
 
 
 class Other(commands.Cog):
